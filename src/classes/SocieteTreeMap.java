@@ -1,5 +1,6 @@
 package classes;
 
+import java.util.Comparator;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -9,7 +10,7 @@ public class SocieteTreeMap implements InterfaceSociete{
     private Map<Employe, Departement> TreeMap1;
 
     public SocieteTreeMap() {
-        this.TreeMap1 = new TreeMap<>();
+        this.TreeMap1 = new TreeMap<>(Comparator.comparing(Employe::getCin));
     }
 
     @Override
